@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { getAllEmployees } from "../../EmployeeServices.js"
+import { getAllEmployees } from "../../services/EmployeeServices.js"
 
 export const Ticket = ({ ticket }) => {
     const [employees, setEmployees] = useState([])

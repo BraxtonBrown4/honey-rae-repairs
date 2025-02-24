@@ -1,4 +1,4 @@
-import { TicketList } from "../honey-raes-api/components/tickets/TicketList"
+import { TicketList } from "./services/components/tickets/TicketList"
 import "./App.css"
 
 export const App = () => {

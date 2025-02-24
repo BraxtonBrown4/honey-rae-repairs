@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getAllTickets } from "../../../src/services/TicketServices.jsx"
+import { getAllTickets } from "../../TicketServices.jsx"
 import './Tickets.css'
 import { Ticket } from "./Ticket.jsx"
 
@@ -9,7 +9,6 @@ export const TicketList = () => {
     const [filteredTickets, setFilteredTickets] = useState([])
 
     useEffect(() => {
-
         getAllTickets().then((ticketsArray) => {
             setAllTickets(ticketsArray)
         })

@@ -18,15 +18,15 @@ export const CustomerDetails = () => {
         <section className="customer">
             <header className="customer-header">{customer.user?.fullName}</header>
             <div>
-                <span className="customer-info">Email : </span>
+                <span className="customer-info">Email: </span>
                 {customer.user?.email}
             </div>
             <div>
-                <span className="customer-info">Address : </span>
+                <span className="customer-info">Address: </span>
                 {customer.address}
             </div>
             <div>
-                <span className="customer-info">Phone Number : </span>
+                <span className="customer-info">Phone Number: </span>
                 {customer.phoneNumber}
             </div>
         </section>

@@ -12,8 +12,11 @@ export const App = () => {
       <Route path="/" element={<><NavBar/> <Outlet/></>}>
         <Route index element={<Welcome/>}/>
         <Route path="tickets" element={<TicketList/>}/>
-        <Route path="customers" element={<CustomerList/>}/>
         <Route path="employees" element={<EmployeeList/>}/>
+        <Route path="customers">
+          <Route index element={<CustomerList/>}/>
+          <Route path=":customerId" element={<>Customer Details</>}/>
+        </Route>
       </Route>
     </Routes>
   )

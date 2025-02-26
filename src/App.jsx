@@ -1,5 +1,6 @@
 import { NavBar } from "./components/nav/NavBar"
 import { Welcome } from "./components/welcome/Welcome"
+import { CustomerDetails } from "./components/customers/CustomerDetails"
 import { TicketList } from "./components/tickets/TicketList"
 import { CustomerList } from "./components/customers/CustomerList"
 import { EmployeeList } from "./components/employees/EmployeeList"
@@ -15,7 +16,7 @@ export const App = () => {
         <Route path="employees" element={<EmployeeList/>}/>
         <Route path="customers">
           <Route index element={<CustomerList/>}/>
-          <Route path=":customerId" element={<>Customer Details</>}/>
+          <Route path=":customerId" element={<CustomerDetails/>}/>
         </Route>
       </Route>
     </Routes>

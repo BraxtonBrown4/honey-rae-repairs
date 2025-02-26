@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { getStaffUsers } from "../../services/UserService"
-import { User } from "../../users/User"
+import { User } from "../users/User"
 import "./Employee.css"
 
 export const EmployeeList = () => {

@@ -3,13 +3,21 @@ export const getAllTickets = () => {
 }
 
 export const assignTicket = (employeeTicket) => {
-    const postOptions = {
+    return fetch('http://localhost:8088/employeeTickets', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(employeeTicket)
-    }
+    })
+}
 
-    return fetch('http://localhost:8088/employeeTickets', postOptions)
+export const updateTicket = (ticket) => {
+    return fetch(`http://localhost:8088/serviceTickets/${ticket.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(ticket)
+    })
 }

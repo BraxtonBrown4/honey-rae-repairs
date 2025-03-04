@@ -1,4 +1,4 @@
-export const TicketFilterBar = ({ setSearchTerm, setShowEmergencyOnly, currentUser }) => {
+export const TicketFilterBar = ({ setSearchTerm, setShowEmergencyOnly, currentUser, setShowOpenOnly }) => {
     return (
         <div className="filter-bar">
             {
@@ -10,8 +10,8 @@ export const TicketFilterBar = ({ setSearchTerm, setShowEmergencyOnly, currentUs
                     </> :
                     <>
                         <button className="filter-btn btn-primary" onClick={() => {}}>Create Ticket</button>
-                        <button className="filter-btn btn-info" onClick={() => {}}>Open Tickets</button>
-                        <button className="filter-btn btn-secondary" onClick={() => {}}>All My Tickets</button>
+                        <button className="filter-btn btn-info" onClick={() => {setShowOpenOnly(true)}}>Open Tickets</button>
+                        <button className="filter-btn btn-secondary" onClick={() => {setShowOpenOnly(false)}}>All My Tickets</button>
                     </>
             }
 
